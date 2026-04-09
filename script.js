@@ -71,6 +71,9 @@ class RadioPlayer {
         // Intentar reproducir automáticamente
         this.attemptAutoplay();
         
+        // Listener global para la primera interacción (supera bloqueos de autoplay)
+        this.setupFirstInteraction();
+        
         // Mostrar mensaje de bienvenida
         setTimeout(() => {
             this.showToast('🎵 ¡Bienvenido a ' + CONFIG.STATION_NAME + '!');
@@ -299,6 +302,22 @@ class RadioPlayer {
             this.showToast('👆 Presiona play para comenzar a escuchar');
             this.updateConnectionStatus('paused', 'Listo para reproducir');
         });
+    }
+
+    setupFirstInteraction() {
+        const startOnInteraction = async () => {
+            if (!this.isPlaying) {
+                await this.play().catch(e => console.log("Aún bloqueado:", e));
+            }
+            // Eliminar los listeners después de la primera interacción exitosa
+            window.removeEventListener('click', startOnInteraction);
+            window.removeEventListener('touchstart', startOnInteraction);
+            window.removeEventListener('keydown', startOnInteraction);
+        };
+
+        window.addEventListener('click', startOnInteraction);
+        window.addEventListener('touchstart', startOnInteraction);
+        window.addEventListener('keydown', startOnInteraction);
     }
     
     showToast(message, duration = 3000) {
