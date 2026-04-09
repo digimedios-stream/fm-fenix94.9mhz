@@ -1,0 +1,20 @@
+{
+    "name": "FM Radio - En Vivo",
+    "short_name": "FM Radio",
+    "description": "Escucha tu emisora de FM favorita en vivo",
+    "theme_color": "#1a1a2e",
+    "background_color": "#0f0f1a",
+    "display": "standalone",
+    "orientation": "portrait",
+    "scope": "/",
+    "start_url": "/",
+    "icons": [
+        {
+            "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23e94560'/><path d='M35 35 L70 50 L35 65 Z' fill='white'/></svg>",
+            "sizes": "512x512",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": ["music", "entertainment"]
+}
