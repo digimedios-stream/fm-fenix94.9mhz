@@ -321,6 +321,12 @@ body {
 }
 
 .info-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.info-card {
     background: rgba(26, 26, 46, 0.5);
     backdrop-filter: blur(10px);
     padding: 20px;
@@ -333,6 +339,16 @@ body {
 .info-card:hover {
     transform: translateY(-5px);
     background: rgba(26, 26, 46, 0.7);
+    border-color: var(--primary);
+    box-shadow: 0 10px 20px rgba(233, 69, 96, 0.2);
+}
+
+.info-card.clickable {
+    cursor: pointer;
+}
+
+.info-card.clickable:active {
+    transform: scale(0.98);
 }
 
 .info-card h3 {
