@@ -1,10 +1,10 @@
-const CACHE_NAME = 'fm-radio-v1';
+const CACHE_NAME = 'fm-radio-v2';
 const urlsToCache = [
-    '/',
-    '/index.html',
-    '/styles.css',
-    '/script.js',
-    '/manifest.json'
+    './',
+    'index.html',
+    'styles.css',
+    'script.js',
+    'manifest.json'
 ];
 
 self.addEventListener('install', event => {

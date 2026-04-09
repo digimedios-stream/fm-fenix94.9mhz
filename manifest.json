@@ -6,14 +6,21 @@
     "background_color": "#0f0f1a",
     "display": "standalone",
     "orientation": "portrait",
-    "scope": "/",
-    "start_url": "/",
+    "scope": "./",
+    "start_url": "index.html",
+    "id": "fm-radio-fenix",
     "icons": [
         {
-            "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23e94560'/><path d='M35 35 L70 50 L35 65 Z' fill='white'/></svg>",
-            "sizes": "512x512",
+            "src": "icon.svg",
+            "sizes": "192x192 512x512",
             "type": "image/svg+xml",
-            "purpose": "any maskable"
+            "purpose": "any"
+        },
+        {
+            "src": "icon.svg",
+            "sizes": "192x192 512x512",
+            "type": "image/svg+xml",
+            "purpose": "maskable"
         }
     ],
     "categories": ["music", "entertainment"]
