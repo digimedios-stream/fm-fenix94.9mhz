@@ -56,6 +56,32 @@ body {
     flex-direction: column;
 }
 
+/* Aviso de cierre */
+.closing-notice {
+    background: rgba(233, 69, 96, 0.2);
+    border: 1px solid var(--primary);
+    border-radius: 15px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.closing-notice svg {
+    color: var(--primary);
+    flex-shrink: 0;
+}
+
 /* Header */
 .header {
     text-align: center;
